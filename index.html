@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emotions Heard</title>
+  <style>
+    :root {
+      --matcha: #7fa37c;
+      --gold: #d6b26a;
+      --light: #f7f7f7;
+      --dark: #2e2e2e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      border-bottom: 2px solid var(--matcha);
+      z-index: 1000;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--matcha);
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      color: var(--matcha);
+    }
+
+    .menu {
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--matcha);
+    }
+
+    nav {
+      display: none;
+      position: fixed;
+      top: 65px;
+      right: 0;
+      background: white;
+      width: 200px;
+      border-left: 2px solid var(--matcha);
+      border-bottom: 2px solid var(--matcha);
+    }
+
+    nav a {
+      display: block;
+      padding: 15px;
+      color: var(--dark);
+      text-decoration: none;
+      border-bottom: 1px solid #eee;
+    }
+
+    nav a:hover {
+      background: var(--matcha);
+      color: white;
+    }
+
+    section {
+      padding: 90px 20px 60px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      color: var(--matcha);
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      margin-top: 25px;
+      color: var(--gold);
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px 5px;
+      padding: 12px 18px;
+      background: var(--matcha);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .departments div {
+      margin-top: 15px;
+    }
+
+    details {
+      margin-top: 15px;
+      background: white;
+      padding: 15px;
+      border-radius: 5px;
+      border-left: 4px solid var(--matcha);
+    }
+
+    footer {
+      background: white;
+      padding: 20px;
+      border-top: 2px solid var(--matcha);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    footer small {
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .title { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-area">
+    <div class="logo"></div>
+    <div>
+      <div class="title">Emotions Heard</div>
+      <small><a href="#" style="color: var(--gold); text-decoration:none;">Instagram</a></small>
+    </div>
+  </div>
+  <div class="menu" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav id="nav">
+  <a href="#home">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#volunteer">Get Involved</a>
+  <a href="#impact">Our Impact</a>
+  <a href="#donate">Donate</a>
+  <a href="#events">Events</a>
+  <a href="#contact">Contact Us</a>
+</nav>
+
+<section id="home">
+  <h1>Our Mission</h1>
+  <p>Emotions Heard exists to create a safe space where people can express their feelings through art, writing, research, and action — without fear of judgment.</p>
+
+  <h3>Join Us</h3>
+  <a class="btn" href="#donate">Donate</a>
+  <a class="btn" href="#volunteer">Volunteer</a>
+  <a class="btn" href="#">Leadership Applications</a>
+
+  <h3>Create an Impact</h3>
+  <a class="btn" href="#">Share Your Story</a>
+
+  <details>
+    <summary><strong>International Connection</strong></summary>
+    <p>We’ve reached 60+ countries worldwide, helping people feel heard across cultures.</p>
+    <p>[Flags Placeholder]</p>
+  </details>
+
+  <details>
+    <summary><strong>Our Partners</strong></summary>
+    <p>Our amazing partners help us expand impact and support communities globally.</p>
+    <p>[Partner Logos Placeholder]</p>
+  </details>
+</section>
+
+<section id="volunteer">
+  <h2>Volunteers</h2>
+  <p><strong>How do you become a volunteer?</strong></p>
+  <ol>
+    <li>Pick a team</li>
+    <li>Sign up</li>
+    <li>Receive your project & earn volunteer hours</li>
+  </ol>
+
+  <h3>Departments</h3>
+  <div class="departments">
+    <div><strong>Arts Department</strong> – Express emotions through visual creativity.</div>
+    <div><strong>Writing Department</strong> – Share personal stories and research.</div>
+    <div><strong>Marketing Department</strong> – Spread voices through media.</div>
+    <div><strong>Events Department</strong> – Turn empathy into action.</div>
+  </div>
+
+  <h3>Join the Community</h3>
+  <a class="btn" href="#">Member Application</a>
+  <a class="btn" href="#">Head Department Application</a>
+  <a class="btn" href="#">Ambassador Application</a>
+</section>
+
+<section id="impact">
+  <h2>Our Impact</h2>
+  <p>[Impact content coming soon]</p>
+</section>
+
+<section id="donate">
+  <h2>Donate</h2>
+  <p>Every dollar goes toward supporting children and communities whose emotions and voices often go unheard.</p>
+  <ul>
+    <li>Helps children build confidence and self-expression</li>
+    <li>Invests in communities we care about</li>
+  </ul>
+  <a class="btn" href="#">GoFundMe</a>
+  <a class="btn" href="#">Help Us Donate</a>
+  <p><small>You can help by selling products to support our mission.</small></p>
+</section>
+
+<section id="events">
+  <h2>Events</h2>
+  <p><strong>14/12/25</strong> — Launch of Emotions Heard</p>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: emotionsheard@gmail.com</p>
+  <p>For collaborations & partnerships, DM us on Instagram.</p>
+  <p>Please do not DM for general inquiries.</p>
+</section>
+
+<footer>
+  <small>© Emotions Heard</small>
+  <small>Follow us on Instagram</small>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('nav');
+    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
